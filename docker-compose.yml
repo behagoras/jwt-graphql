@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  db:
+    image: "postgres"
+    container_name: "postgres_jwt"
+    environment:
+      POSTGRES_PASSWORD: test
+      POSTGRES_USER: test
+      POSTGRES_DB: jwt_auth_example
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
